@@ -1,19 +1,23 @@
-import Button from './Button.jsx'
+import { Link } from 'react-router-dom';
+
+import Button from './Button.jsx';
 
 function Header() {
-	return (
-		<div className="header">
-        <div className="container">
+  return (
+    <div className="header">
+      <div className="container">
+        <Link to="/">
           <div className="header__logo">
-
             <div>
               <h1>React Pizza</h1>
               <p>самая вкусная пицца во вселенной</p>
             </div>
           </div>
-          <div className="header__cart">
-					<Button className="button--cart">
-						<span>520 ₽</span>
+        </Link>
+        <div className="header__cart">
+          <Link to="/cart">
+            <Button className="button--cart">
+              <span>520 ₽</span>
               <div className="button__delimiter"></div>
               <svg
                 width="18"
@@ -45,12 +49,12 @@ function Header() {
                 />
               </svg>
               <span>3</span>
-						</Button >
-          </div>
+            </Button>
+          </Link>
         </div>
       </div>
-	);
-};
+    </div>
+  );
+}
 
 export default Header;
-
