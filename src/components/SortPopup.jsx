@@ -26,7 +26,7 @@ function SortPopup(props) {
   }, []);
 
   return (
-    <div ref={sortRef} className="sort">
+    <div onClick={toggleVisiblePopup} ref={sortRef} className="sort">
       <div className="sort__label">
         <svg
           className={visiblePopup ? 'rotated' : ''}
@@ -42,7 +42,7 @@ function SortPopup(props) {
           />
         </svg>
         <b>Сортировка по:</b>
-        <span onClick={toggleVisiblePopup}> {activeLabel} </span>
+        <span> {activeLabel} </span>
       </div>
       {visiblePopup && (
         <div className="sort__popup">
