@@ -6,7 +6,7 @@
   margin-bottom: 65px;
 
   &:not(:nth-of-type(4n)) {
-    margin-right: 35px;
+    margin-right: 3.7%;
   }
 
   &__image {
@@ -48,9 +48,9 @@
           border-radius: 5px;
           cursor: auto;
         }
-				&.disabled {
+        &.disabled {
           opacity: 0.4;
-					pointer-events: none;
+          pointer-events: none;
         }
       }
     }
